@@ -1,8 +1,11 @@
 import React from 'react';
-
 import './App.css';
+import axios from 'axios';
+
+// import the DisplayEmployee component
 import DisplayEmployee from './components/DisplayEmployee';
 
+// store employees datas
 const sampleEmployee = {
   gender: 'male',
   name: {
@@ -25,8 +28,9 @@ const sampleEmployee = {
 
 function App() {
   return (
+    // call DisplayEmployee component
     <>
-      <DisplayEmployee employee={sampleEmployee} />
+      <DisplayEmployee employee={sampleEmployee} /> {/*pass down sampleEmplyee as props*/}
     </>
   );
 }
